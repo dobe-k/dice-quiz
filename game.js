@@ -1,6 +1,6 @@
 class DiceQuizGame {
     constructor() {
-        this.currentPosition = 0;
+        this.currentPosition = 12;
         this.coins = 100;
         this.hearts = 50;
         this.isRolling = false;
@@ -15,9 +15,9 @@ class DiceQuizGame {
         };
         
         this.tileTypes = [
-            '시작', '퀴즈', '코인', '이벤트', '하트', '코인',  // 0-5: top
+            '퀴즈', '퀴즈', '코인', '이벤트', '하트', '코인',  // 0-5: top
             '스페셜', '코인', '공격', '퀴즈', '강탈', '하트',   // 6-11: right
-            '이벤트', '하트', '퀴즈', '코인', '퀴즈', '코인',   // 12-17: bottom
+            '시작', '하트', '퀴즈', '코인', '퀴즈', '코인',   // 12-17: bottom
             '스페셜', '하트', '코인', '공격', '랜덤', '퀴즈',   // 18-23: left
             '센터',                                      // 24: center
             '보너스', '타겟', '교환', '매직',            // 25-28: diagonal inner
@@ -26,9 +26,8 @@ class DiceQuizGame {
         
         this.currentPath = 'outer'; // 'outer' or 'diagonal'
         this.diagonalPaths = {
-            6:  [6, 30, 26, 24, 28, 32, 18],  // 우상단 → 센터 → 좌하단
-            12: [12, 31, 27, 24, 25, 29, 0],  // 우하단 → 센터 → 좌상단  
-            18: [18, 32, 28, 24, 26, 30, 6]   // 좌하단 → 센터 → 우상단
+            6:  [6, 30, 26, 24, 28, 32, 12],  // 우상단 → 센터 → 시작점(12)
+            0:  [0, 29, 25, 24, 27, 31, 12]   // 좌상단 → 센터 → 시작점(12)
         };
         
         this.quizQuestions = [
@@ -311,12 +310,12 @@ class DiceQuizGame {
                         this.currentPosition = currentDiagonalPath[this.diagonalIndex];
                     }
                 } else {
-                    // Move along outer path (24 tiles)
-                    this.currentPosition = (this.currentPosition + 1) % 24;
+                    // Move along outer path (24 tiles) - counter-clockwise
+                    this.currentPosition = (this.currentPosition - 1 + 24) % 24;
                 }
                 
-                // Check if completed a lap on outer path
-                if (this.currentPath === 'outer' && previousPosition > this.currentPosition && this.currentPosition === 0) {
+                // Check if completed a lap on outer path (counter-clockwise, back to start position 12)
+                if (this.currentPath === 'outer' && previousPosition < this.currentPosition && this.currentPosition === 12) {
                     this.lapCount++;
                     this.showLapCompleteToast();
                 }
@@ -578,6 +577,13 @@ class DiceQuizGame {
                 this.createMegaFireworks();
                 this.createFlyingHearts();
                 this.flashScreen();
+                
+                // Special rule: Always return to start position (12) after center
+                setTimeout(() => {
+                    this.currentPosition = 12;
+                    this.updatePlayerPosition();
+                    this.showMessage('🏠 시작점으로 돌아갑니다!');
+                }, 2000);
                 break;
                 
             case '챔피언':
