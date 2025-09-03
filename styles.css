@@ -156,35 +156,34 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    width: 80px;
-    height: 80px;
+    width: 76px;
+    height: 76px;
     transition: all 0.3s ease;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tile.corner {
-    width: 80px;
-    height: 80px;
+    width: 76px;
+    height: 76px;
 }
 
 .tile.top, .tile.bottom {
-    width: 80px;
-    height: 80px;
+    width: 76px;
+    height: 76px;
 }
 
 .tile.left, .tile.right {
-    width: 80px;
-    height: 80px;
+    width: 76px;
+    height: 76px;
 }
 
 .tile.center {
-    width: 80px;
-    height: 80px;
+    width: 76px;
+    height: 76px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 265px;
+    left: 265px;
     background: linear-gradient(135deg, #ffd700 0%, #ff6b6b 100%);
     border: 3px solid #fff;
     box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
@@ -192,175 +191,157 @@ body {
 }
 
 .tile.diagonal {
-    width: 80px;
-    height: 80px;
+    width: 76px;
+    height: 76px;
     position: absolute;
     border: 2px solid #fff;
     z-index: 1;
 }
 
-/* Outer tiles - 7x7 board (24 tiles) */
+/* Outer tiles - 6x6 board (20 tiles) - Perfect Grid System */
 .tile.top-left {
-    top: 10px;
-    left: 10px;
+    top: 15px;
+    left: 15px;
 }
 
 .tile.top:nth-of-type(2) {
-    top: 10px;
-    left: 93px;
+    top: 15px;
+    left: 115px;
 }
 
 .tile.top:nth-of-type(3) {
-    top: 10px;
-    left: 176px;
+    top: 15px;
+    left: 215px;
 }
 
 .tile.top:nth-of-type(4) {
-    top: 10px;
-    left: 259px;
+    top: 15px;
+    left: 315px;
 }
 
 .tile.top:nth-of-type(5) {
-    top: 10px;
-    left: 342px;
-}
-
-.tile.top:nth-of-type(6) {
-    top: 10px;
-    left: 425px;
+    top: 15px;
+    left: 415px;
 }
 
 .tile.top-right {
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    left: 515px;
+}
+
+.tile.right:nth-of-type(7) {
+    top: 115px;
+    left: 515px;
 }
 
 .tile.right:nth-of-type(8) {
-    top: 93px;
-    right: 10px;
+    top: 215px;
+    left: 515px;
 }
 
 .tile.right:nth-of-type(9) {
-    top: 176px;
-    right: 10px;
+    top: 315px;
+    left: 515px;
 }
 
 .tile.right:nth-of-type(10) {
-    top: 259px;
-    right: 10px;
-}
-
-.tile.right:nth-of-type(11) {
-    top: 342px;
-    right: 10px;
-}
-
-.tile.right:nth-of-type(12) {
-    top: 425px;
-    right: 10px;
+    top: 415px;
+    left: 515px;
 }
 
 .tile.bottom-right {
-    bottom: 10px;
-    right: 10px;
+    top: 515px;
+    left: 515px;
+}
+
+.tile.bottom:nth-of-type(12) {
+    top: 515px;
+    left: 415px;
+}
+
+.tile.bottom:nth-of-type(13) {
+    top: 515px;
+    left: 315px;
 }
 
 .tile.bottom:nth-of-type(14) {
-    bottom: 10px;
-    right: 93px;
+    top: 515px;
+    left: 215px;
 }
 
 .tile.bottom:nth-of-type(15) {
-    bottom: 10px;
-    right: 176px;
-}
-
-.tile.bottom:nth-of-type(16) {
-    bottom: 10px;
-    right: 259px;
-}
-
-.tile.bottom:nth-of-type(17) {
-    bottom: 10px;
-    right: 342px;
-}
-
-.tile.bottom:nth-of-type(18) {
-    bottom: 10px;
-    right: 425px;
+    top: 515px;
+    left: 115px;
 }
 
 .tile.bottom-left {
-    bottom: 10px;
-    left: 10px;
+    top: 515px;
+    left: 15px;
+}
+
+.tile.left:nth-of-type(17) {
+    top: 415px;
+    left: 15px;
+}
+
+.tile.left:nth-of-type(18) {
+    top: 315px;
+    left: 15px;
+}
+
+.tile.left:nth-of-type(19) {
+    top: 215px;
+    left: 15px;
 }
 
 .tile.left:nth-of-type(20) {
-    bottom: 93px;
-    left: 10px;
+    top: 115px;
+    left: 15px;
 }
 
-.tile.left:nth-of-type(21) {
-    bottom: 176px;
-    left: 10px;
+/* Diagonal cross tiles aligned to 100px grid system - 6x6 board */
+/* Top-left to center diagonal */
+.tile.diagonal[data-index="21"] {
+    top: 115px;
+    left: 115px;
 }
 
-.tile.left:nth-of-type(22) {
-    bottom: 259px;
-    left: 10px;
+.tile.diagonal[data-index="22"] {
+    top: 190px;
+    left: 190px;
 }
 
-.tile.left:nth-of-type(23) {
-    bottom: 342px;
-    left: 10px;
+/* Top-right to center diagonal */
+.tile.diagonal[data-index="23"] {
+    top: 115px;
+    left: 415px;
 }
 
-.tile.left:nth-of-type(24) {
-    bottom: 425px;
-    left: 10px;
+.tile.diagonal[data-index="24"] {
+    top: 190px;
+    left: 340px;
 }
 
-/* Diagonal cross tiles forming X pattern */
-/* Inner diagonal tiles (closer to center) */
+/* Bottom-right to center diagonal */
 .tile.diagonal[data-index="25"] {
-    top: 176px;
-    left: 176px;
+    top: 415px;
+    left: 415px;
 }
 
 .tile.diagonal[data-index="26"] {
-    top: 176px;
-    right: 176px;
+    top: 340px;
+    left: 340px;
 }
 
+/* Bottom-left to center diagonal */
 .tile.diagonal[data-index="27"] {
-    bottom: 176px;
-    right: 176px;
+    top: 415px;
+    left: 115px;
 }
 
 .tile.diagonal[data-index="28"] {
-    bottom: 176px;
-    left: 176px;
-}
-
-/* Outer diagonal tiles (closer to corners) */
-.tile.diagonal[data-index="29"] {
-    top: 93px;
-    left: 93px;
-}
-
-.tile.diagonal[data-index="30"] {
-    top: 93px;
-    right: 93px;
-}
-
-.tile.diagonal[data-index="31"] {
-    bottom: 93px;
-    right: 93px;
-}
-
-.tile.diagonal[data-index="32"] {
-    bottom: 93px;
-    left: 93px;
+    top: 340px;
+    left: 190px;
 }
 
 .tile:hover {
@@ -1502,13 +1483,13 @@ body {
     
     
     .tile {
-        width: 75px;
-        height: 75px;
+        width: 68px;
+        height: 68px;
     }
     
     .tile.corner, .tile.top, .tile.bottom, .tile.left, .tile.right {
-        width: 75px;
-        height: 75px;
+        width: 68px;
+        height: 68px;
     }
     
     .tile.top-left {
@@ -1669,13 +1650,13 @@ body {
     }
     
     .tile {
-        width: 60px;
-        height: 60px;
+        width: 58px;
+        height: 58px;
     }
     
     .tile.corner, .tile.top, .tile.bottom, .tile.left, .tile.right {
-        width: 60px;
-        height: 60px;
+        width: 58px;
+        height: 58px;
     }
     
     .tile.top-left {

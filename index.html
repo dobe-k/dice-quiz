@@ -10,7 +10,8 @@
     <div class="main-container">
         <div class="game-area">
             <div class="game-board">
-            <!-- Outer square tiles (24 tiles for 7x7) -->
+            <!-- Outer square tiles (20 tiles for 6x6) -->
+            <!-- Top row -->
             <div class="tile corner top-left" data-index="0">
                 <div class="tile-content">
                     <span class="tile-icon">❓</span>
@@ -46,66 +47,70 @@
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile top" data-index="5">
-                <div class="tile-content">
-                    <span class="tile-icon">🪙</span>
-                    <span class="tile-name">코인</span>
-                </div>
-                <div class="player-container"></div>
-            </div>
-            <div class="tile corner top-right" data-index="6">
+            
+            <!-- Right column -->
+            <div class="tile corner top-right" data-index="5">
                 <div class="tile-content">
                     <span class="tile-icon">⭐</span>
                     <span class="tile-name">스페셜</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile right" data-index="7">
+            <div class="tile right" data-index="6">
                 <div class="tile-content">
                     <span class="tile-icon">🪙</span>
                     <span class="tile-name">코인</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile right" data-index="8">
+            <div class="tile right" data-index="7">
                 <div class="tile-content">
                     <span class="tile-icon">⚔️</span>
                     <span class="tile-name">공격</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile right" data-index="9">
+            <div class="tile right" data-index="8">
                 <div class="tile-content">
                     <span class="tile-icon">❓</span>
                     <span class="tile-name">퀴즈</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile right" data-index="10">
+            <div class="tile right" data-index="9">
                 <div class="tile-content">
                     <span class="tile-icon">💰</span>
                     <span class="tile-name">강탈</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile right" data-index="11">
-                <div class="tile-content">
-                    <span class="tile-icon">❤️</span>
-                    <span class="tile-name">하트</span>
-                </div>
-                <div class="player-container"></div>
-            </div>
-            <div class="tile corner bottom-right" data-index="12">
+            
+            <!-- Bottom row -->
+            <div class="tile corner bottom-right" data-index="10">
                 <div class="tile-content">
                     <span class="tile-icon">🏁</span>
                     <span class="tile-name">시작</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile bottom" data-index="13">
+            <div class="tile bottom" data-index="11">
                 <div class="tile-content">
                     <span class="tile-icon">❤️</span>
                     <span class="tile-name">하트</span>
+                </div>
+                <div class="player-container"></div>
+            </div>
+            <div class="tile bottom" data-index="12">
+                <div class="tile-content">
+                    <span class="tile-icon">❓</span>
+                    <span class="tile-name">퀴즈</span>
+                </div>
+                <div class="player-container"></div>
+            </div>
+            <div class="tile bottom" data-index="13">
+                <div class="tile-content">
+                    <span class="tile-icon">🪙</span>
+                    <span class="tile-name">코인</span>
                 </div>
                 <div class="player-container"></div>
             </div>
@@ -116,72 +121,46 @@
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile bottom" data-index="15">
-                <div class="tile-content">
-                    <span class="tile-icon">🪙</span>
-                    <span class="tile-name">코인</span>
-                </div>
-                <div class="player-container"></div>
-            </div>
-            <div class="tile bottom" data-index="16">
-                <div class="tile-content">
-                    <span class="tile-icon">❓</span>
-                    <span class="tile-name">퀴즈</span>
-                </div>
-                <div class="player-container"></div>
-            </div>
-            <div class="tile bottom" data-index="17">
-                <div class="tile-content">
-                    <span class="tile-icon">🪙</span>
-                    <span class="tile-name">코인</span>
-                </div>
-                <div class="player-container"></div>
-            </div>
-            <div class="tile corner bottom-left" data-index="18">
+            
+            <!-- Left column -->
+            <div class="tile corner bottom-left" data-index="15">
                 <div class="tile-content">
                     <span class="tile-icon">⭐</span>
                     <span class="tile-name">스페셜</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile left" data-index="19">
+            <div class="tile left" data-index="16">
                 <div class="tile-content">
                     <span class="tile-icon">❤️</span>
                     <span class="tile-name">하트</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile left" data-index="20">
+            <div class="tile left" data-index="17">
                 <div class="tile-content">
                     <span class="tile-icon">🪙</span>
                     <span class="tile-name">코인</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile left" data-index="21">
+            <div class="tile left" data-index="18">
                 <div class="tile-content">
                     <span class="tile-icon">⚔️</span>
                     <span class="tile-name">공격</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile left" data-index="22">
+            <div class="tile left" data-index="19">
                 <div class="tile-content">
                     <span class="tile-icon">🎲</span>
                     <span class="tile-name">랜덤</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile left" data-index="23">
-                <div class="tile-content">
-                    <span class="tile-icon">❓</span>
-                    <span class="tile-name">퀴즈</span>
-                </div>
-                <div class="player-container"></div>
-            </div>
             
             <!-- Center tile -->
-            <div class="tile center" data-index="24">
+            <div class="tile center" data-index="20">
                 <div class="tile-content">
                     <span class="tile-icon">🏆</span>
                     <span class="tile-name">센터</span>
@@ -189,57 +168,57 @@
                 <div class="player-container"></div>
             </div>
             
-            <!-- Diagonal cross tiles (4 tiles forming X) -->
-            <div class="tile diagonal" data-index="25">
+            <!-- Diagonal cross tiles (8 tiles forming X) -->
+            <div class="tile diagonal" data-index="21">
                 <div class="tile-content">
                     <span class="tile-icon">💎</span>
                     <span class="tile-name">보너스</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile diagonal" data-index="26">
+            <div class="tile diagonal" data-index="22">
                 <div class="tile-content">
                     <span class="tile-icon">🎯</span>
                     <span class="tile-name">타겟</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile diagonal" data-index="27">
+            <div class="tile diagonal" data-index="23">
                 <div class="tile-content">
                     <span class="tile-icon">🔄</span>
                     <span class="tile-name">교환</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile diagonal" data-index="28">
+            <div class="tile diagonal" data-index="24">
                 <div class="tile-content">
                     <span class="tile-icon">✨</span>
                     <span class="tile-name">매직</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile diagonal" data-index="29">
+            <div class="tile diagonal" data-index="25">
                 <div class="tile-content">
                     <span class="tile-icon">🎁</span>
                     <span class="tile-name">선물</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile diagonal" data-index="30">
+            <div class="tile diagonal" data-index="26">
                 <div class="tile-content">
                     <span class="tile-icon">🌟</span>
                     <span class="tile-name">럭키</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile diagonal" data-index="31">
+            <div class="tile diagonal" data-index="27">
                 <div class="tile-content">
                     <span class="tile-icon">🎰</span>
                     <span class="tile-name">슬롯</span>
                 </div>
                 <div class="player-container"></div>
             </div>
-            <div class="tile diagonal" data-index="32">
+            <div class="tile diagonal" data-index="28">
                 <div class="tile-content">
                     <span class="tile-icon">🏆</span>
                     <span class="tile-name">챔피언</span>
